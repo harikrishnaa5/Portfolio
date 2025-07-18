@@ -14,11 +14,6 @@ export const navMenu = [
         key: "skills",
         item: "Skills",
     },
-    {
-        id: 4,
-        key: "contact",
-        item: "Connect Me",
-    },
 ];
 
 export const twitter = "https://x.com/harikrishna__1";
@@ -32,14 +27,14 @@ export const frontEnd = [
         img: "/react logo.png",
     },
     {
-        key: "javascript",
-        name: "JavaScript",
-        img: "/javascript logo.png",
-    },
-    {
         key: "nextjs",
         name: "Next.js",
         img: "/next.js logo.png",
+    },
+    {
+        key: "javascript",
+        name: "JavaScript",
+        img: "/javascript logo.png",
     },
     {
         key: "mui",
@@ -50,6 +45,11 @@ export const frontEnd = [
         key: "tailwindcss",
         name: "TailwindCSS",
         img: "/tailwindcss logo.svg",
+    },
+    {
+        key: "scss",
+        name: "SCSS",
+        img: "/scss logo.png",
     },
 ];
 
@@ -80,3 +80,8 @@ export const backEnd = [
         img: "/typescript logo.svg",
     },
 ];
+
+export const connectMe = {
+    Email: "harikrishnaswathi14@gmail.com",
+    Phone: "+91 9497769002",
+};
