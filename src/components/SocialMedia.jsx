@@ -8,13 +8,13 @@ const SocialMedia = () => {
     return (
         <>
             <Link to={linkedin} target="_blank">
-                <img className="w-7 h-7 cursor-pointer" src={LinkedIn} alt="linkedin" />
+                <img className="w-5 h-5 sm:w-7 sm:h-7 cursor-pointer" src={LinkedIn} alt="linkedin" />
             </Link>
             <Link to={github} target="_blank">
-                <img className="w-7 h-7 cursor-pointer" src={GitHub} alt="github" />
+                <img className="w-5 h-5 sm:w-7 sm:h-7  cursor-pointer" src={GitHub} alt="github" />
             </Link>
             <Link to={twitter} target="_blank">
-                <img className="w-7 h-7 cursor-pointer" src={Twitter} alt="twitter" />
+                <img className="w-5 h-5 sm:w-7 sm:h-7 cursor-pointer" src={Twitter} alt="twitter" />
             </Link>
         </>
     );
