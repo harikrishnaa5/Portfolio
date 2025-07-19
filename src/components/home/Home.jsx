@@ -1,3 +1,4 @@
+import { useState } from "react";
 import HomeImage from "../../assets/Harikrishna.png";
 import Node from "../../assets/node.js-logo.png";
 import React from "../../assets/react-logo.png";
@@ -5,6 +6,7 @@ import React from "../../assets/react-logo.png";
 import SocialMedia from "../SocialMedia";
 
 const Home = () => {
+    const [toast, setToast] = useState(false)
     const handleDownload = () => {
         const link = document.createElement("a");
         link.href = "/Harikrishna_N_Resume.pdf";
@@ -12,6 +14,11 @@ const Home = () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        setToast(true)
+        setTimeout(() => {
+            setToast(false)
+        }, 4000);
+
     };
     return (
         <section className="w-screen px-12 pt-12 md:pt-0 flex flex-col justify-center md:flex-row gap-10 md:gap-16">
