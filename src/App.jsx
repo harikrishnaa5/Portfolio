@@ -16,7 +16,7 @@ function App() {
         setContactSelected(true);
     };
     return (
-        <div className="min-h-screen pt-10 pb-22 sm:pt-0 sm:pb-12">
+        <div className="app min-h-screen pt-10 pb-22 sm:pt-0 sm:pb-12">
             <Header
                 open={open}
                 setOpen={setOpen}

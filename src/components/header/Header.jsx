@@ -17,7 +17,7 @@ const Header = ({ open, contactSelected, handleContactClick, setContactSelected 
                         (location.pathname === `/${menu.key}` || (location.pathname === "/" && menu.key === "home"));
                     return (
                         <li
-                            className={`cursor-pointer hover:text-amber-500 transition-colors duration-200 ${
+                            className={`cursor-pointer hover:text-amber-500 transition-colors duration-200 active:scale-95 ${
                                 isActive ? " text-amber-500" : ""
                             }`}
                             key={menu.id}
@@ -27,7 +27,7 @@ const Header = ({ open, contactSelected, handleContactClick, setContactSelected 
                     );
                 })}
                 <li
-                    className={`cursor-pointer hover:text-amber-500 transition-colors duration-300 ${
+                    className={`cursor-pointer hover:text-amber-500 transition-colors duration-300 active:scale-95 ${
                         contactSelected ? " text-amber-500" : ""
                     }`}
                     onClick={handleContactClick}

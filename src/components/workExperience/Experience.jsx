@@ -5,7 +5,7 @@ import ExperienceCard from "./ExperienceCard";
 const Experience = () => {
     return (
         <div className="px-12">
-            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12">Work Experience</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-shadow-lg">Work Experience</h1>
             {workExperience?.map((data) => {
                 return (
                     <div key={data?.id} className="flex gap-10 sm:gap-16 justify-center mb-6">

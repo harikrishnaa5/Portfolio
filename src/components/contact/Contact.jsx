@@ -19,7 +19,7 @@ const Contact = ({ open, setOpen }) => {
                         className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95 p-6"
                     >
                         <div className="flex px-4 sm:p-6 sm:pb-4 flex-col gap-4">
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">Connect me</h1>
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-shadow-lg">Connect me</h1>
                             {Object.entries(connectMe).map(([key, value]) => (
                                 <p className="text-sm sm:text-base" key={key}>
                                     {key}:{" "}
