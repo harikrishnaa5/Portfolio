@@ -1,6 +1,6 @@
-import Twitter from "../../public/twitter-icon.png";
-import LinkedIn from "../../public/linkedin-icon.png";
-import GitHub from "../../public/github-icon.png";
+import Twitter from "../assets/twitter-icon.png";
+import LinkedIn from "../assets/linkedin-icon.png";
+import GitHub from "../assets/github-icon.png";
 import { Link } from "react-router-dom";
 import { github, linkedin, twitter } from "../constants";
 

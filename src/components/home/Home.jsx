@@ -1,10 +1,18 @@
-import HomeImage from "../../../public/Harikrishna.png";
-import Node from "../../../public/node.js logo.png";
-import React from "../../../public/React logo.png";
+import HomeImage from "../../assets/Harikrishna.png";
+import Node from "../../assets/node.js-logo.png";
+import React from "../../assets/react-logo.png";
 
 import SocialMedia from "../SocialMedia";
 
 const Home = () => {
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = "/Harikrishna_N_Resume.pdf";
+        link.download = "Harikrishna_N_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return (
         <section className="w-screen px-12 pt-12 md:pt-0 flex flex-col justify-center md:flex-row gap-10 md:gap-16">
             <div className="w-2/3 sm:w-1/3 rounded-full shadow-2xl self-center">
@@ -13,7 +21,6 @@ const Home = () => {
             <div className="flex flex-col gap-2 md:pt-10 md:pl-10 items-center md:items-start">
                 <h2 className="text-2xl font-medium">Hi, I'm </h2>
                 <h1 className="text-4xl shadow-lg sm:text-5xl lg:text-6xl font-bold">Harikrishna N</h1>
-                {/* <hr className="w-1/3 h-1 border-0 bg-yellow-700" /> */}
                 <h3 className="text-2xl md:text-4xl">Software Engineer</h3>
                 <p className=" flex flex-col md:flex-row md:gap-4 md:items-center leading-normal">Working primarily with</p>
                 <span className="flex text-1xl gap-4 items-center">
@@ -23,6 +30,15 @@ const Home = () => {
                 <div className="md:w-1/2 mt-2 hidden md:flex justify-center md:justify-start gap-5">
                     <SocialMedia />
                 </div>
+                <span className="flex gap-4 py-6 items-center">
+                    Resume :
+                    <button
+                        onClick={handleDownload}
+                        className="flex gap-2 cursor-pointer hover:bg-amber-400 transition-colors duration-200 bg-amber-300 border-0 rounded-xl py-2 px-3"
+                    >
+                        Download <i className="fa-solid fa-download pt-0.5"></i>
+                    </button>
+                </span>
             </div>
         </section>
     );
