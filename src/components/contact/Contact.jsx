@@ -1,4 +1,3 @@
-"use client";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import SocialMedia from "../SocialMedia";
 import { connectMe } from "../../constants";
