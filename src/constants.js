@@ -123,7 +123,7 @@ export const workExperience = [
         website: "",
         duration: "March 2023 - February 2024",
         location: "Remote",
-        role: "Freelance MERN Stack developer",
+        role: "MERN Stack developer",
         techStack: "HTML, CSS, JavaScript, React, Node.js, MongoDB",
         description:
             "Delivered responsive and dynamic web solutions using HTML, CSS, JavaScript, React, Node.js, and MongoDB. Handled full-cycle development for client projects — from UI design and frontend implementation to backend logic and database integration.",
