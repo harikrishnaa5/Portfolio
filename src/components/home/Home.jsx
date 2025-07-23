@@ -21,7 +21,7 @@ const Home = () => {
 
     };
     return (
-        <section className="w-screen px-12 pt-12 md:pt-0 flex flex-col justify-center md:flex-row gap-10 md:gap-16">
+        <section className="w-screen px-12 pt-6 md:pt-0 flex flex-col justify-center md:flex-row gap-10 md:gap-16">
             <div className="w-2/3 sm:w-1/3 rounded-full shadow-2xl self-center">
                 <img className="rounded-full" src={HomeImage} alt="img" />
             </div>
