@@ -11,6 +11,7 @@ import TypeScriptLogo from "./assets/typescript-logo.svg";
 import SCSSLogo from "./assets/scss-logo.png";
 import XmindsLogo from "./assets/xminds-logo.jpg";
 import MUILogo from "./assets/materialUI-logo.png";
+import Scalino from "./assets/scalino-logo.png";
 
 export const navMenu = [
     {
@@ -106,24 +107,36 @@ export const connectMe = {
 export const workExperience = [
     {
         id: 1,
+        logo: Scalino,
+        companyName: `Scalino Technologies LLP   - Freelance`,
+        website: "https://scalinotechnologies.com/",
+        duration: "August 2025 - Present",
+        location: "Calicut, Kerala, India  -Hybrid",
+        role: "Front-End Developer",
+        techStack: "React, Next.js, MaterialUI, TailwindCSS",
+        description:
+            "Responsible for front-end development across multiple projects, including CRM systems, ERP solutions, and Forex trading platforms.",
+    },
+    {
+        id: 2,
         logo: XmindsLogo,
         companyName: "Xminds Infotech Pvt Ltd",
         website: "https://www.xminds.com/",
         duration: "March 2024 - June 2025",
         location: "Technopark, Trivandrum, Kerala, India  -On-site",
-        role: "Full-stack web developer",
+        role: "Full-stack Web Developer",
         techStack: "React, Node.js, Express, Next.js, MaterialUI, Angular, Nest.js, MongoDB, Jira, SonarQube",
         description:
             "As a Full Stack Developer, I worked on building and maintaining scalable web applications using the MERN stack. My responsibilities included developing dynamic front-end interfaces with React and Next.js, implementing RESTful APIs with Express and Node.js, and managing data flow using MongoDB. I collaborated closely with designers and backend teams to deliver clean, responsive, and high-performance user experiences.",
     },
     {
-        id: 2,
+        id: 3,
         logo: FreelanceLogo,
         companyName: "Freelance",
         website: "",
         duration: "March 2023 - February 2024",
         location: "Remote",
-        role: "MERN Stack developer",
+        role: "MERN Stack Developer",
         techStack: "HTML, CSS, JavaScript, React, Node.js, MongoDB",
         description:
             "Delivered responsive and dynamic web solutions using HTML, CSS, JavaScript, React, Node.js, and MongoDB. Handled full-cycle development for client projects — from UI design and frontend implementation to backend logic and database integration.",

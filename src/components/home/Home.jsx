@@ -26,9 +26,9 @@ const Home = () => {
                 <img className="rounded-full" src={HomeImage} alt="img" />
             </div>
             <div className="flex flex-col gap-2 md:pt-10 md:pl-10 items-center md:items-start">
-                <h2 className="text-2xl font-medium">Hi, I'm </h2>
-                <h1 className="text-4xl shadow-lg sm:text-5xl lg:text-6xl font-bold">Harikrishna N</h1>
-                <h3 className="text-2xl md:text-4xl">Software Engineer</h3>
+                <h2 className="text-2xl text-shadow-md font-medium">Hi, I'm </h2>
+                <h1 className="text-4xl text-shadow-lg sm:text-5xl lg:text-6xl font-bold">Harikrishna N</h1>
+                <h3 className="text-2xl text-shadow-md md:text-4xl">Software Engineer</h3>
                 <p className=" flex flex-col md:flex-row md:gap-4 md:items-center leading-normal">Working primarily with</p>
                 <span className="flex text-1xl gap-4 items-center">
                     <img className="w-24 md:w-33 md:h-9 mb-2 md:mt-0" src={Node} alt="" />
