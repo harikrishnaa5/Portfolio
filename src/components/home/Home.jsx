@@ -1,6 +1,5 @@
 import { useState } from "react";
-import HomeImage from "../../assets/broto-img.jpg";
-// import HomeImage from "../../assets/Harikrishna.png";
+import HomeImage from "../../assets/Profile-pic.jpg";
 import Node from "../../assets/node.js-logo.png";
 import React from "../../assets/react-logo.png";
 
