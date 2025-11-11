@@ -11,7 +11,9 @@ import TypeScriptLogo from "./assets/typescript-logo.svg";
 import SCSSLogo from "./assets/scss-logo.png";
 import XmindsLogo from "./assets/xminds-logo.jpg";
 import MUILogo from "./assets/materialUI-logo.png";
-import Scalino from "./assets/scalino-logo.png";
+import Scalino from "./assets/scalino-logo.png";    
+import ReduxLogo from "./assets/saga.webp";
+import PythonLogo from "./assets/python-logo.webp";
 
 export const navMenu = [
     {
@@ -53,6 +55,11 @@ export const frontEnd = [
         key: "javascript",
         name: "JavaScript",
         img: JavaScriptLogo,
+    },
+    {
+        key: "saga",
+        name: "Redux-Saga",
+        img: ReduxLogo,
     },
     {
         key: "mui",
@@ -97,6 +104,11 @@ export const backEnd = [
         name: "TypeScript",
         img: TypeScriptLogo,
     },
+    {
+        key: "python",
+        name: "Python",
+        img: PythonLogo,
+    },
 ];
 
 export const connectMe = {
@@ -108,12 +120,12 @@ export const workExperience = [
     {
         id: 1,
         logo: Scalino,
-        companyName: `Scalino Technologies LLP   - Freelance`,
+        companyName: `Scalino Technologies LLP`,
         website: "https://scalinotechnologies.com/",
-        duration: "August 2025 - Present",
+        duration: "July 2025 - November 2025",
         location: "Calicut, Kerala, India  -Hybrid",
         role: "Front-End Developer",
-        techStack: "React, Next.js, MaterialUI, TailwindCSS",
+        techStack: "React, Next.js, TypeScript, MaterialUI, TailwindCSS",
         description:
             "Responsible for front-end development across multiple projects, including CRM systems, ERP solutions, and Forex trading platforms.",
     },
@@ -124,7 +136,7 @@ export const workExperience = [
         website: "https://www.xminds.com/",
         duration: "March 2024 - June 2025",
         location: "Technopark, Trivandrum, Kerala, India  -On-site",
-        role: "Full-stack Web Developer",
+        role: "Full-Stack Developer",
         techStack: "React, Node.js, Express, Next.js, MaterialUI, Angular, Nest.js, MongoDB, Jira, SonarQube",
         description:
             "As a Full Stack Developer, I worked on building and maintaining scalable web applications using the MERN stack. My responsibilities included developing dynamic front-end interfaces with React and Next.js, implementing RESTful APIs with Express and Node.js, and managing data flow using MongoDB. I collaborated closely with designers and backend teams to deliver clean, responsive, and high-performance user experiences.",
