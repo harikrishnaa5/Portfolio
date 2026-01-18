@@ -33,7 +33,7 @@ const Header = ({ open, contactSelected, handleContactClick, setContactSelected 
                     }`}
                     onClick={handleContactClick}
                 >
-                    Connect me
+                    Contact
                 </li>
             </ul>
         </div>

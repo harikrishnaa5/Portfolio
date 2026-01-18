@@ -14,6 +14,7 @@ import MUILogo from "./assets/materialUI-logo.png";
 import Scalino from "./assets/scalino-logo.png";    
 import ReduxLogo from "./assets/saga.webp";
 import PythonLogo from "./assets/python-logo.webp";
+import PostgresLogo from "./assets/postgres-logo.webp";
 
 export const navMenu = [
     {
@@ -98,6 +99,11 @@ export const backEnd = [
         key: "mongodb",
         name: "MongoDB",
         img: MongoDBLogo,
+    },
+    {
+        key: "postgresql",
+        name: "PostgreSQL",
+        img: PostgresLogo,
     },
     {
         key: "typescript",

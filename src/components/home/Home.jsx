@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HomeImage from "../../assets/Profile-pic.jpg";
+import HomeImage from "../../assets/Profile-pic.jpeg";
 import Node from "../../assets/node.js-logo.png";
 import React from "../../assets/react-logo.png";
 
@@ -38,12 +38,12 @@ const Home = () => {
                     <SocialMedia />
                 </div>
                 <span className="flex gap-4 py-6 items-center">
-                    Here is my resume
+                    Download my resume
                     <button
                         onClick={handleDownload}
                         className="flex gap-2 cursor-pointer hover:bg-amber-400 transition-colors duration-200 bg-amber-300 border-0 rounded-xl py-2 px-3 active:scale-97"
                     >
-                        Download <i className="fa-solid fa-download pt-0.5"></i>
+                        <i className="fa-solid fa-download pt-0.5"></i>
                     </button>
                 </span>
             </div>
