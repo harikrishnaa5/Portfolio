@@ -10,10 +10,12 @@ import TailwindLogo from "./assets/tailwindcss-logo.svg";
 import TypeScriptLogo from "./assets/typescript-logo.svg";
 import SCSSLogo from "./assets/scss-logo.png";
 import XmindsLogo from "./assets/xminds-logo.jpg";
+import PeerbrainsLogo from "./assets/peerbrains-logo.webp";
 import MUILogo from "./assets/materialUI-logo.png";
 import Scalino from "./assets/scalino-logo.png";    
 import ReduxLogo from "./assets/saga.webp";
 import PythonLogo from "./assets/python-logo.webp";
+import FastifyLogo from "./assets/fastify-logo.png";
 import PostgresLogo from "./assets/postgres-logo.webp";
 
 export const navMenu = [
@@ -111,6 +113,11 @@ export const backEnd = [
         img: TypeScriptLogo,
     },
     {
+        key: "fastify",
+        name: "Fastify",
+        img: FastifyLogo,
+    },
+    {
         key: "python",
         name: "Python",
         img: PythonLogo,
@@ -118,11 +125,23 @@ export const backEnd = [
 ];
 
 export const connectMe = {
-    Email: "harikrishnaswathi14@gmail.com",
+    Email: "harikrishnaaa1111@gmail.com",
     Phone: "+91 9497769002",
 };
 
 export const workExperience = [
+    {
+        id: 0,
+        logo: PeerbrainsLogo,
+        companyName: "Peerbrains Technologies",
+        website: "",
+        duration: "November 2025 - Present",
+        location: "Bengaluru, Karnataka, India  -Remote",
+        role: "Programmer Analyst",
+        techStack: "Node.js, Express, Fastify, PostgreSQL, MongoDB, React, MaterialUI, TailwindCSS, SCSS, TypeScript, Docker",
+        description:
+            "",
+    },
     {
         id: 1,
         logo: Scalino,
