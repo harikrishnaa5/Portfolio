@@ -1,5 +1,102 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root,
+.light {
+    --bg: #f8f9fb;
+    --surface: #ffffff;
+    --surface-elevated: #ffffff;
+    --text: #0f172a;
+    --text-secondary: #475569;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --accent-muted: rgba(99, 102, 241, 0.12);
+    --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.04);
+    --shadow-lg: 0 4px 6px rgba(15, 23, 42, 0.04), 0 20px 40px rgba(15, 23, 42, 0.08);
+    --backdrop: rgba(15, 23, 42, 0.4);
+    --ring-glow: rgba(99, 102, 241, 0.25);
+    --nav-glass: rgba(248, 249, 251, 0.58);
+    --nav-glass-border: rgba(226, 232, 240, 0.6);
+}
+
+.dark {
+    --bg: #16161d;
+    --surface: #22222c;
+    --surface-elevated: #2c2c38;
+    --text: #f4f4f5;
+    --text-secondary: #b4b4be;
+    --muted: #8b8b98;
+    --border: #363644;
+    --accent: #818cf8;
+    --accent-hover: #a5b4fc;
+    --accent-muted: rgba(129, 140, 248, 0.18);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.15), 0 20px 40px rgba(0, 0, 0, 0.22);
+    --backdrop: rgba(22, 22, 29, 0.55);
+    --ring-glow: rgba(129, 140, 248, 0.22);
+    --nav-glass: rgba(22, 22, 28, 0.65);
+    --nav-glass-border: rgba(54, 54, 68, 0.75);
+}
+
+.nav-glass {
+    background-color: var(--nav-glass);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
+    backdrop-filter: blur(8px) saturate(150%);
+}
+
+.nav-glass-pill {
+    background-color: color-mix(in srgb, var(--surface) 40%, transparent);
+    -webkit-backdrop-filter: blur(4px) saturate(140%);
+    backdrop-filter: blur(4px) saturate(140%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.35s ease, color 0.35s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.page-enter {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toast-enter {
+    animation: toastIn 0.35s ease-out forwards;
 }

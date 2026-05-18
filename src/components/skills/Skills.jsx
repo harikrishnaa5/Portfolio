@@ -1,36 +1,27 @@
 import SkillsCard from "../skillsCard/SkillsCard";
 import { frontEnd, backEnd } from "../../constants";
-import FrontendLogo from "../../assets/frontend-logo.png";
-import BackendLogo from "../../assets/server-logo.png";
+
+const SkillSection = ({ title, iconClass, skills }) => (
+    <div className="mt-12 first:mt-8">
+        <div className="mb-6 flex items-center justify-center gap-3 md:justify-start">
+            <i className={`${iconClass} text-2xl text-[var(--accent)] sm:text-3xl`} aria-hidden />
+            <h2 className="text-xl font-semibold tracking-tight text-[var(--text)] sm:text-2xl">{title}</h2>
+        </div>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+            {skills?.map((skill) => (
+                <SkillsCard key={skill?.key} skill={skill} />
+            ))}
+        </div>
+    </div>
+);
 
 const Skills = () => {
     return (
-        <div className="px-12">
-            <h1 className="text-3xl sm:text-4xl font-bold text-center text-shadow-lg">Skills</h1>
-            <span className="flex justify-center md:justify-start gap-2 mt-3 items-center">
-                <h2 className="text-xl sm:text-2xl mt-1.5 font-medium text-center md:ml-6 md:text-start text-shadow-md">
-                    Front-end
-                </h2>
-                <img className="w-9 h-8" src={FrontendLogo} alt="front-end" />
-            </span>
-
-            <span className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-                {frontEnd?.map((skill) => (
-                    <SkillsCard key={skill?.key} skill={skill} />
-                ))}
-            </span>
-            <span className="flex justify-center md:justify-start gap-2 mt-16 items-center">
-                <h2 className="text-xl sm:text-2xl font-medium text-center md:ml-6 md:text-start text-shadow-md mt-1.5">
-                    Back-end
-                </h2>
-                <img className="w-9 h-8" src={BackendLogo} alt="back-end" />
-            </span>
-            <span className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-                {backEnd?.map((skill) => (
-                    <SkillsCard key={skill?.key} skill={skill} />
-                ))}
-            </span>
-        </div>
+        <section className="px-6 py-8 md:px-10">
+            <h1 className="text-center text-3xl font-bold tracking-tight text-[var(--text)] sm:text-4xl">Skills</h1>
+            <SkillSection title="Front-end" iconClass="fa-solid fa-display" skills={frontEnd} />
+            <SkillSection title="Back-end" iconClass="fa-solid fa-server" skills={backEnd} />
+        </section>
     );
 };
 

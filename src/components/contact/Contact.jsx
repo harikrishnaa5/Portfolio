@@ -1,43 +1,58 @@
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import SocialMedia from "../SocialMedia";
 import { connectMe } from "../../constants";
-import { Link } from "react-router-dom";
 
 const Contact = ({ open, setOpen }) => {
     return (
-        <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
+        <Dialog open={open} onClose={() => setOpen(false)} className="relative z-50">
             <DialogBackdrop
                 transition
-                className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+                className="fixed inset-0 bg-[var(--backdrop)] backdrop-blur-sm transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
             />
 
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                <div className="flex min-h-full justify-center p-4 text-center items-center sm:p-0">
+                <div className="flex min-h-full items-center justify-center p-4">
                     <DialogPanel
                         transition
-                        className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95 p-6"
+                        className="w-full max-w-md transform overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 shadow-[var(--shadow-lg)] transition-all data-closed:scale-95 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
                     >
-                        <div className="flex px-4 sm:p-6 sm:pb-4 flex-col gap-4">
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-shadow-lg">Contact</h1>
+                        <div className="mb-6 flex items-center justify-between">
+                            <h2 className="text-2xl font-bold tracking-tight text-[var(--text)]">Contact</h2>
+                            <button
+                                type="button"
+                                onClick={() => setOpen(false)}
+                                aria-label="Close"
+                                className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-[var(--muted)] transition-colors hover:bg-[var(--accent-muted)] hover:text-[var(--text)]"
+                            >
+                                <i className="fa-solid fa-xmark" />
+                            </button>
+                        </div>
+
+                        <div className="flex flex-col gap-5">
                             {Object.entries(connectMe).map(([key, value]) => (
-                                <p className="text-sm sm:text-base" key={key}>
-                                    {key}:{" "}
+                                <div key={key} className="flex flex-col gap-1">
+                                    <span className="text-xs font-medium uppercase tracking-wider text-[var(--muted)]">
+                                        {key}
+                                    </span>
                                     {key.toLowerCase() === "email" ? (
-                                        <Link
-                                            to={`https://mail.google.com/mail/?view=cm&fs=1&to=${value}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                        <a
+                                            href={`mailto:${value}`}
+                                            className="text-[var(--text)] transition-colors hover:text-[var(--accent)]"
                                         >
                                             {value}
-                                        </Link>
+                                        </a>
                                     ) : (
-                                        value
+                                        <span className="text-[var(--text)]">{value}</span>
                                     )}
-                                </p>
+                                </div>
                             ))}
-                            <p className="flex gap-5 items-center text-sm sm:text-base">
-                                Social media: <SocialMedia />
-                            </p>
+
+                            <div className="mt-2 border-t border-[var(--border)] pt-5">
+                                <span className="mb-3 block text-xs font-medium uppercase tracking-wider text-[var(--muted)]">
+                                    Social
+                                </span>
+                                <SocialMedia />
+                            </div>
                         </div>
                     </DialogPanel>
                 </div>
