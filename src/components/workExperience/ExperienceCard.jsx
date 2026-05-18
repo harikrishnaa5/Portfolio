@@ -1,15 +1,19 @@
 const ExperienceCard = ({ data }) => {
     return (
-        <div className="w-3/4 lg:w-3/5 text-gray-500 shadow-lg p-6 flex flex-col justify-start">
-            <h3 className="text-black text-base md:text-lg font-medium">{data.role}</h3>
-            <h3 className="text-gray-800 text-sm md:text-base">{data.companyName}</h3>
-            <h4 className="text-xs md:text-sm">{data.duration}</h4>
-            <h4 className="italic text-xs md:text-sm">{data.location}</h4>
-            <section className="p-2">
-                <p className="text-xs md:text-sm">{data.description}</p>
-                <h3 className="text-xs md:text-sm italic text-gray-800 mt-2">Technologies : {data.techStack}</h3>
-            </section>
-        </div>
+        <article className="flex-1 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[var(--shadow)] transition-all duration-300 hover:border-[var(--accent)]/30 hover:shadow-[var(--shadow-lg)] sm:p-6">
+            <h3 className="text-base font-semibold text-[var(--text)] md:text-lg">{data.role}</h3>
+            <p className="mt-0.5 text-sm font-medium text-[var(--accent)] md:text-base">{data.companyName}</p>
+            <p className="mt-2 text-xs text-[var(--muted)] md:text-sm">{data.duration}</p>
+            <p className="text-xs italic text-[var(--text-secondary)] md:text-sm">{data.location}</p>
+            {data.description && (
+                <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">{data.description}</p>
+            )}
+            {data.techStack && (
+                <p className="mt-3 rounded-lg bg-[var(--accent-muted)] px-3 py-2 text-xs leading-relaxed text-[var(--text-secondary)] md:text-sm">
+                    <span className="font-medium text-[var(--text)]">Stack:</span> {data.techStack}
+                </p>
+            )}
+        </article>
     );
 };
 

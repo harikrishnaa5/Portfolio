@@ -12,7 +12,7 @@ import SCSSLogo from "./assets/scss-logo.png";
 import XmindsLogo from "./assets/xminds-logo.jpg";
 import PeerbrainsLogo from "./assets/peerbrains-logo.webp";
 import MUILogo from "./assets/materialUI-logo.png";
-import Scalino from "./assets/scalino-logo.png";    
+import Scalino from "./assets/scalino-logo.png";
 import ReduxLogo from "./assets/saga.webp";
 import PythonLogo from "./assets/python-logo.webp";
 import FastifyLogo from "./assets/fastify-logo.png";
@@ -48,36 +48,45 @@ export const frontEnd = [
         key: "react",
         name: "React",
         img: ReactLogo,
+        faIcon: "fa-brands fa-react",
+        brandColor: "#61DAFB",
     },
     {
         key: "nextjs",
         name: "Next.js",
         img: NextLogo,
+        variant: "pad",
     },
     {
         key: "javascript",
         name: "JavaScript",
         img: JavaScriptLogo,
+        faIcon: "fa-brands fa-js",
+        brandColor: "#F7DF1E",
     },
     {
         key: "saga",
         name: "Redux-Saga",
         img: ReduxLogo,
+        variant: "pad",
     },
     {
         key: "mui",
         name: "Material UI",
         img: MUILogo,
+        variant: "pad",
     },
     {
         key: "tailwindcss",
         name: "TailwindCSS",
         img: TailwindLogo,
+        variant: "invert",
     },
     {
         key: "scss",
         name: "SCSS",
         img: SCSSLogo,
+        variant: "pad",
     },
 ];
 
@@ -86,41 +95,51 @@ export const backEnd = [
         key: "nodejs",
         name: "Node.js",
         img: NodeLogo,
+        faIcon: "fa-brands fa-node-js",
+        brandColor: "#339933",
     },
     {
         key: "express",
         name: "Express.js",
         img: ExpressLogo,
+        variant: "pad",
     },
     {
         key: "nestjs",
         name: "Nest.js",
         img: NestLogo,
+        variant: "color",
     },
     {
         key: "mongodb",
         name: "MongoDB",
         img: MongoDBLogo,
+        variant: "color",
     },
     {
         key: "postgresql",
         name: "PostgreSQL",
         img: PostgresLogo,
+        variant: "color",
     },
     {
         key: "typescript",
         name: "TypeScript",
         img: TypeScriptLogo,
+        variant: "invert",
     },
     {
         key: "fastify",
         name: "Fastify",
         img: FastifyLogo,
+        variant: "pad",
     },
     {
         key: "python",
         name: "Python",
         img: PythonLogo,
+        faIcon: "fa-brands fa-python",
+        brandColor: "#3776AB",
     },
 ];
 
@@ -138,9 +157,10 @@ export const workExperience = [
         duration: "November 2025 - Present",
         location: "Bengaluru, Karnataka, India  -Remote",
         role: "Programmer Analyst",
-        techStack: "Node.js, Express, Fastify, PostgreSQL, MongoDB, React, MaterialUI, TailwindCSS, SCSS, TypeScript, Docker",
-        description:
-            "",
+        techStack:
+            "Node.js, Express, Fastify, PostgreSQL, PrismaORM, MongoDB, React, MaterialUI, TailwindCSS, SCSS, TypeScript, Docker",
+        description: "Building a comprehensive auditing system and contributes to multiple software solutions, including a full-featured OTT platform, serving as a full-stack engineer responsible for responsive front-end interfaces, secure back-end services, integrations, and production deployments.",
+        logoVariant: "pad",
     },
     {
         id: 1,
@@ -152,7 +172,8 @@ export const workExperience = [
         role: "Front-End Developer",
         techStack: "React, Next.js, TypeScript, MaterialUI, TailwindCSS",
         description:
-            "Responsible for front-end development across multiple projects, including CRM systems, ERP solutions, and Forex trading platforms.",
+            "Led front-end development across CRM, ERP, and Forex trading projects, building responsive, user-centric interfaces and collaborating with cross-functional teams.",
+        logoVariant: "color",
     },
     {
         id: 2,
@@ -162,9 +183,11 @@ export const workExperience = [
         duration: "March 2024 - June 2025",
         location: "Technopark, Trivandrum, Kerala, India  -On-site",
         role: "Full-Stack Developer",
-        techStack: "React, Node.js, Express, Next.js, MaterialUI, Angular, Nest.js, MongoDB, Jira, SonarQube",
+        techStack:
+            "React, Node.js, Express, Next.js, MaterialUI, Angular, Nest.js, MongoDB, Jira, SonarQube",
         description:
             "As a Full Stack Developer, I worked on building and maintaining scalable web applications using the MERN stack. My responsibilities included developing dynamic front-end interfaces with React and Next.js, implementing RESTful APIs with Express and Node.js, and managing data flow using MongoDB. I collaborated closely with designers and backend teams to deliver clean, responsive, and high-performance user experiences.",
+        logoVariant: "pad",
     },
     {
         id: 3,
@@ -177,5 +200,6 @@ export const workExperience = [
         techStack: "HTML, CSS, JavaScript, React, Node.js, MongoDB",
         description:
             "Delivered responsive and dynamic web solutions using HTML, CSS, JavaScript, React, Node.js, and MongoDB. Handled full-cycle development for client projects — from UI design and frontend implementation to backend logic and database integration.",
+        logoVariant: "color",
     },
 ];
