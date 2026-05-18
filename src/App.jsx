@@ -7,6 +7,7 @@ import Skills from "./components/skills/Skills";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
 import BottomNav from "./components/BottomNav";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
     const [open, setOpen] = useState(false);
@@ -46,6 +47,7 @@ function App() {
                 contactSelected={contactSelected}
                 setContactSelected={setContactSelected}
             />
+            <ScrollToTopButton />
         </div>
     );
 }
